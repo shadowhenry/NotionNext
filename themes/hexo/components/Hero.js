@@ -2,10 +2,10 @@
 import { useEffect, useState } from 'react'
 import Typed from 'typed.js'
 import CONFIG from '../config'
-import NavButtonGroup from './NavButtonGroup'
+import NavIndexArea from './NavIndexArea'
 import { useGlobal } from '@/lib/global'
-import LazyImage from '@/components/LazyImage'
 import { siteConfig } from '@/lib/config'
+import LazyVideo from '@/components/LazyVideo'
 
 let wrapperTop = 0
 
@@ -58,15 +58,15 @@ const Hero = props => {
 
             <div className="text-white absolute bottom-0 flex flex-col h-full items-center justify-center w-full ">
                 {/* 站点标题 */}
-                <div className='font-black text-4xl md:text-5xl shadow-text'>{siteConfig('TITLE')}</div>
+                {/* <div className='font-black text-4xl md:text-5xl shadow-text'>{siteConfig('TITLE')}</div> */}
                 {/* 站点欢迎语 */}
-                <div className='mt-2 h-12 items-center text-center font-medium shadow-text text-lg'>
+                {/* <div className='mt-2 h-12 items-center text-center font-medium shadow-text text-lg'>
                     <span id='typed' />
-                </div>
+                </div> */}
 
                 {/* 首页导航大按钮 */}
-                {siteConfig('HEXO_HOME_NAV_BUTTONS', null, CONFIG) && <NavButtonGroup {...props} />}
-
+                {/* {siteConfig('HEXO_HOME_NAV_BUTTONS', null, CONFIG) && <NavButtonGroup {...props} />} */}
+                {siteConfig('HEXO_HOME_NAV_BUTTONS', null, CONFIG) && <NavIndexArea/>}
                 {/* 滚动按钮 */}
                 <div onClick={scrollToWrapper} className="z-10 cursor-pointer w-full text-center py-4 text-3xl absolute bottom-10 text-white">
                     <div className="opacity-70 animate-bounce text-xs">{siteConfig('HEXO_SHOW_START_READING', null, CONFIG) && locale.COMMON.START_READING}</div>
@@ -74,8 +74,7 @@ const Hero = props => {
                 </div>
             </div>
 
-            <LazyImage id='header-cover' src={siteInfo?.pageCover}
-                className={`header-cover w-full h-screen object-cover object-center ${siteConfig('HEXO_HOME_NAV_BACKGROUND_IMG_FIXED', null, CONFIG) ? 'fixed' : ''}`} />
+            <LazyVideo id='header-video' src='/ocean/ocean.mp4' poster="/ocean/ocean.ogv" className={`header-video w-full h-screen object-cover object-center ${siteConfig('HEXO_HOME_NAV_BACKGROUND_IMG_FIXED', null, CONFIG) ? 'fixed' : ''}`}/>
 
         </header>
   )
