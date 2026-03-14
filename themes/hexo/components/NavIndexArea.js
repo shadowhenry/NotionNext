@@ -26,9 +26,9 @@ const NavIndexArea = () => {
   }, [])
 
   return (
-    <div className="z-20 text-center text-white">
-      <h1><a className='font-bold text-2xl md:text-4xl' href="#">Paradise Island</a></h1>
-      <p className='m-6 text-xs md:text-xl' >simple &amp; happy &amp; cool</p>
+    <div className="z-20 text-center text-white dark:text-gray-100">
+      <h1><a className='font-bold text-2xl md:text-4xl text-white dark:text-gray-100' href="#">Paradise Island</a></h1>
+      <p className='m-6 text-xs md:text-xl text-white dark:text-gray-100' >simple & happy & cool</p>
       <div className='flex items-center justify-center'>
         <Image
           src="/ocean/shark-inverted.svg"
