@@ -6,6 +6,10 @@ import '@/styles/utility-patterns.css'
 import '@/styles/notion.css' //  重写部分notion样式
 import 'react-notion-x/src/styles.css' // 原版的react-notion-x
 
+// 应用 notion-utils 补丁
+import { applyNotionUtilsPatch } from '@/lib/utils/notion-utils-patch'
+applyNotionUtilsPatch();
+
 import useAdjustStyle from '@/hooks/useAdjustStyle'
 import { GlobalContextProvider } from '@/lib/global'
 import { getBaseLayoutByTheme } from '@/themes/theme'
