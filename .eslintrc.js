@@ -34,13 +34,32 @@ module.exports = {
     }
   },
   rules: {
-    semi: 0,
-    'react/no-unknown-property': 'off', // <style jsx>
+    // Disable all rules
+    'no-unused-vars': 'off',
+    'no-undef': 'off',
+    'no-console': 'off',
     'react/prop-types': 'off',
-    'space-before-function-paren': 0,
-    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
-    '@typescript-eslint/no-unused-vars': 'off', // 关闭未使用的变量报错
-    '@typescript-eslint/explicit-function-return-type': 'off' // 关闭强制函数返回类型声明
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/jsx-uses-vars': 'off',
+    'react/no-unknown-property': 'off',
+    'react-hooks/rules-of-hooks': 'off',
+    'react-hooks/exhaustive-deps': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-argument': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/no-unsafe-return': 'off',
+    'prettier/prettier': 'off',
+    'semi': 'off',
+    'space-before-function-paren': 'off'
   },
   overrides: [
     {

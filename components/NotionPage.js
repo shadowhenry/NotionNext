@@ -133,7 +133,9 @@ const NotionPage = ({ post, className }) => {
           Equation,
           Modal,
           Pdf,
-          Tweet
+          Tweet,
+          // 使用自定义的 Block 组件来处理 uuidToId 错误
+          Block: dynamic(() => import('@/components/CustomNotionBlock').then(m => m.CustomNotionBlock), { ssr: true })
         }}
       />
 
