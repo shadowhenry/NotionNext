@@ -18,7 +18,6 @@
   },
   "scripts": {
     "dev": "next dev",
-    "vercel-build": "npm uninstall -g pnpm && npm install -g pnpm@latest && pnpm config set registry https://registry.npmjs.org/ && pnpm install --force && pnpm build",
     "build": "cross-env BUILD_MODE=true next build",
     "start": "next start",
     "post-build": "next-sitemap --config next-sitemap.config.js",
