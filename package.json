@@ -4,7 +4,8 @@
   "homepage": "https://github.com/tangly1024/NotionNext.git",
   "license": "MIT",
   "engines": {
-    "node": "22.x"
+    "node": "22.x",
+    "pnpm": ">=8.0.0"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,8 @@
   },
   "scripts": {
     "dev": "next dev",
+    "vercel-build": "npm uninstall -g pnpm && npm install -g pnpm@latest && pnpm config set registry https://registry.npmjs.org/ && pnpm install --force && pnpm build",
     "build": "cross-env BUILD_MODE=true next build",
-    "vercel-build": "pnpm install && pnpm build",
     "start": "next start",
     "post-build": "next-sitemap --config next-sitemap.config.js",
     "export": "cross-env BUILD_MODE=true EXPORT=true next build && next-sitemap --config next-sitemap.config.js",
