@@ -200,7 +200,6 @@ const nextConfig = {
           if (prefix) {
             langs.push(prefix)
           }
-          console.log('[Locales]', siteId)
         }
 
         // 映射多语言
